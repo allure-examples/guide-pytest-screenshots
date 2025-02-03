@@ -11,7 +11,7 @@ if defined _OLD_CODEPAGE (
 )
 
 set PACKAGE_NAME=generic_report
-set PY_VERSION=3.12
+set PY_VERSION=3.9
 set SCRIPT_DIR=%~dp0
 set SCRIPT_DIR=%SCRIPT_DIR:~0,-1%
 set VENV_DIR_NAME=.env
