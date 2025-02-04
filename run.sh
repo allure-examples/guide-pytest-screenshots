@@ -1,7 +1,7 @@
-pyte#!/bin/bash
+#!/bin/bash
 
-PACKAGE_NAME="generic_report"
-PY_VERSION="3.11.5"
+PACKAGE_NAME="pytest_screenshots"
+PY_VERSION="3.9"
 SCRIPT_DIR="$(realpath "$(dirname "${BASH_SOURCE[0]}")")"
 VENV_DIR_NAME=venv
 EXPECTED_VENV_DIR=${EXPECTED_VENV_DIR:="$SCRIPT_DIR/$VENV_DIR_NAME"}

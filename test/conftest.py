@@ -1,55 +1,26 @@
-import os
-
+import re
 import allure
 import pytest
 
-from playwright.async_api import Page
+from pathlib import Path
 
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-RES_DIR = os.path.join(BASE_DIR, "resources")
-
-
-@pytest.fixture
-def custom_page(playwright):
-    browser = playwright.chromium.launch()
-    context = browser.new_context()
-    page = context.new_page()
-    yield page
-
+SCREENSHOT_NAME_PATTERN = re.compile(r"^test-failed-\d+\.png$")
 
 @pytest.hookimpl(hookwrapper=True)
-def pytest_exception_interact(node, call, report):
-    page = None
-
-    # find the fixture that provides a page
-    for fixture_name in node.fixturenames:
-        if fixture_name in node.funcargs.keys():
-            fixture = node.funcargs[fixture_name]
-            if isinstance(fixture, Page):
-                page = fixture
-                break
-
-    if page:
-        attach_screenshot(page)
-
+def pytest_runtest_teardown(item, nextitem):
     yield
 
-
-def attach_screenshot(page):
-    screenshot_bytes = page.screenshot()
-    allure.attach(
-        screenshot_bytes,
-        name="full-page",
-        attachment_type=allure.attachment_type.PNG
-    )
-
-
-def attach_element_screenshot(elem):
-    screenshot_bytes = elem.screenshot()
-    allure.attach(
-        screenshot_bytes,
-        name="element",
-        attachment_type=allure.attachment_type.PNG
-    )
-
-
+    try:
+        artifacts_dir = item.funcargs.get("output_path")
+        if artifacts_dir:
+            artifacts_dir_path = Path(artifacts_dir)
+            if artifacts_dir_path.is_dir():
+                for file in artifacts_dir_path.iterdir():
+                    if file.is_file() and SCREENSHOT_NAME_PATTERN.match(file.name):
+                        allure.attach.file(
+                            str(file),
+                            name=file.name,
+                            attachment_type=allure.attachment_type.PNG,
+                        )
+    except Exception as e:
+        print(f"Error taking screenthot: {e}")
