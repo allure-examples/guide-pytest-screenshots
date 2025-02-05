@@ -10,7 +10,7 @@ if defined _OLD_CODEPAGE (
     "%SystemRoot%\System32\chcp.com" 65001 > nul
 )
 
-set PACKAGE_NAME=generic_report
+set PACKAGE_NAME=pytest_screenshots
 set PY_VERSION=3.9
 set SCRIPT_DIR=%~dp0
 set SCRIPT_DIR=%SCRIPT_DIR:~0,-1%

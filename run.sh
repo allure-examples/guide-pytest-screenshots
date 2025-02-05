@@ -1,6 +1,6 @@
 #!/bin/bash
 
-PACKAGE_NAME="generic_report"
+PACKAGE_NAME="pytest_screenshots"
 PY_VERSION="3.9"
 SCRIPT_DIR="$(realpath "$(dirname "${BASH_SOURCE[0]}")")"
 VENV_DIR_NAME=venv
