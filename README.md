@@ -30,7 +30,7 @@ This repository is a part of Allure Report documentation and contains code examp
     cd path/to/guide-pytest-selenium-screenshots
     ```
 
-## Running code example
+## Run tests
 
 The repository provides with automatic scripts that install the virtual environment, necessary packages, and run the tests. Run the script correspondind to your operating system. For Linux and MacOS:
 
@@ -65,4 +65,4 @@ pytest
     allure serve -p <port-of-your-choice>
     ```
 
-1. Browse Allure Report page on `http://127.0.0.1/<port-of-your-choice>`.
+1. Browse Allure Report page on `http://127.0.0.1/<port-of-your-choice>`
