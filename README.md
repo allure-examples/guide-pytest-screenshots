@@ -3,7 +3,7 @@
 This repository is a part of Allure Report documentation and contains code examples for integrating screenshots in Allure Report with Pytest and Selenium. You can find the original documentation:
 
 - [English version](https://allurereport.org/docs/guides/pytest-selenium-screenshots/)
-- [Spanish version](https://allurereport.org/es/docs/guides/pytest-selenium-screenshots//)
+- [Spanish version](https://allurereport.org/es/docs/guides/pytest-selenium-screenshots/)
 
 ## Preparation
 
