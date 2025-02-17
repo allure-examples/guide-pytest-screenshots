@@ -9,8 +9,8 @@ This repository is a part of Allure Report documentation and contains code examp
 
 1. Make sure you have installed:
 
-- [Python](https://www.python.org/downloads/) version 3.9 or higher
-- [Allure Report](https://allurereport.org/docs/install/)
+    - [Python](https://www.python.org/downloads/) version 3.9 or higher
+    - [Allure Report](https://allurereport.org/docs/install/)
 
 1. Clone the repository via HTTPS:
 
@@ -44,7 +44,7 @@ For OS Windows:
 .\run.bat
 ```
 
-Alternatively, create and activate Python virtual environment and install the packages manually:
+Alternatively, create a Python virtual environment manually, activate it, and install the packages used in the project:
 
 ```shell
 python -m venv venv
