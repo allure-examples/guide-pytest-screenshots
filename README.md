@@ -44,18 +44,36 @@ For OS Windows:
 .\run.bat
 ```
 
-Alternatively, create a Python virtual environment manually, activate it, and install the packages used in the project:
+Alternatively:
+1. Create a Python virtual environment manually: activate it, and install the packages used in the project:
 
-```shell
-python -m venv venv
-source venv/bin/activate
-pip install -r requirements.txt
-```
+    ```shell
+    python -m venv venv
+    ```
 
-After the installation, run:
-```
-pytest
-```
+1. Activate the virtual environment (Linux and MacOS):
+
+    ```shell
+    source venv/bin/activate 
+    ```
+    
+    OS Windows:
+
+    ```shell
+    venv\Scripts\activate
+    ```
+
+1. Install the packages used in the project:
+
+    ```
+    pip install -r requirements.txt
+    ```
+
+1. Run Pytest:
+
+    ```
+    pytest
+    ```
 
 ## Run Allure Report
 
