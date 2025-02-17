@@ -49,7 +49,7 @@ Alternatively, create a Python virtual environment manually, activate it, and in
 ```shell
 python -m venv venv
 source venv/bin/activate
-pip install -m requirements.txt
+pip install -r requirements.txt
 ```
 
 After the installation, run:
