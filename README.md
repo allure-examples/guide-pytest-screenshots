@@ -45,7 +45,7 @@ For OS Windows:
 ```
 
 Alternatively:
-1. Create a Python virtual environment manually: activate it, and install the packages used in the project:
+1. Create a Python virtual environment manually:
 
     ```shell
     python -m venv venv
@@ -59,8 +59,8 @@ Alternatively:
     
     OS Windows:
 
-    ```shell
-    venv\Scripts\activate
+    ```powershell
+    .\venv\Scripts\Activate.ps1
     ```
 
 1. Install the packages used in the project:
@@ -83,4 +83,4 @@ Alternatively:
     allure serve -p <port-of-your-choice>
     ```
 
-1. Browse Allure Report page on `http://127.0.0.1/<port-of-your-choice>`
+1. Browse Allure Report page on `http://127.0.0.1:<port-of-your-choice>`
